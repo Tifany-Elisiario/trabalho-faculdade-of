@@ -1,13 +1,27 @@
 @charset "UTF-8";
 
 :root {
-  --cor-fundo: #fdfdfd;          /* branco levemente quente */
-  --cor-menu: #e3eaf2;           /* azul bem claro e elegante */
-  --cor-link: #3b4a5a;           /* azul acinzentado escuro para texto */
-  --cor-link-hover: #1f2d3d;     /* tom mais intenso no hover */
-  --cor-botao: #c2d3e0;          /* azul clarinho para botão */
-  --cor-botao-hover: #a5b9c9;    /* tom médio no hover */
-  --cor-texto: #2e2e2e;          /* cinza grafite, ótima leitura */
+  --cor-fundo:            #fdfdfd;
+  --cor-menu:             #2c3e50;   /* faixa do menu */
+  --cor-link-hover:       #3b526d;
+  --cor-botao:            #c2d3e0;
+  --cor-botao-hover:      #a5b9c9;
+  --cor-texto:            #2e2e2e;
+
+  --cor-paragrafo-fundo:  #e3fafd;   /* azul bem suave para blocos de texto */
+  --cor-foto-borda:       #2c3e50;   /* azul médio, em sintonia com o cinza */
+}
+
+
+body {
+    margin: auto;
+}
+
+nav {
+    box-shadow: deslocamento-x deslocamento-y desfoque espalhamento cor;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--cor-foto-borda);
+
 }
 
 nav ul {
@@ -21,26 +35,28 @@ nav ul {
 nav li {
     margin: 10px;
     display: inline;
-    margin-right: 100px;
+    margin-right: 10px;
+
     
 }
 
 nav a {
     text-decoration: none;
-    color: var(--cor-texto);
-    padding: 15px;
-    border-radius: 5px;
+    color: white;
     background-color: var(--cor-menu);
     }
 
-body {
-    margin: auto;
-    
-}
+   nav a:hover {
+    text-decoration: none;
+    color:white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* sombra suave branca */
+    } 
+
 
 h1{
     text-align: center;
     margin-bottom: 50px;
+    color: var(--cor-texto);
 }
 
 section {
@@ -54,7 +70,8 @@ section {
 
 .paragrafos {
     display: flexbox;
-    background-color: blueviolet;
+    background-color: var(--cor-paragrafo-fundo);
+    border: 2px solid var(--cor-foto-borda);
     max-width: 600px;
     max-height: 400px;
     border-radius: 5px;
@@ -66,17 +83,24 @@ section {
     display: flex;
     justify-content: flex-start;
     max-width: 300px;
-    border: 3px solid blue;
+    border: 3px solid var(--cor-foto-borda);
     border-radius: 50%;
-    background-color: black;
     margin-left: 70px;
-
+    box-shadow: deslocamento-x deslocamento-y desfoque espalhamento cor;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
 }
 
 img {
     border-radius: 50%;
     
+}
+
+.paragrafos {
+    background-color: var(--cor-paragrafo-fundo);
+    color: var(--cor-texto);
+    box-shadow: deslocamento-x deslocamento-y desfoque espalhamento cor;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .botao {
@@ -87,18 +111,23 @@ img {
     margin-top: 70px;
     background-color: var(--cor-botao);
     width: 200px;
+    box-shadow: deslocamento-x deslocamento-y desfoque espalhamento cor;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.botao:hover {
+    background-color: var(--cor-botao-hover); 
 }
 
 a {
     text-decoration: none;
      width: 200px;
+     color: var(--cor-texto);
 }
 
 
 .botao a:hover {
     text-decoration: none;
-    background-color: var(--cor-link-hover);
-    color: white;
-   
+    background-color: var(--cor-botao-hover);
 }
 

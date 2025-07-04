@@ -1,37 +1,74 @@
 @charset "UTF-8";
 
+@charset "UTF-8";
+
+:root {
+  --cor-fundo:            #fdfdfd;
+  --cor-menu:             #2c3e50;   /* faixa do menu */
+  --cor-link-hover:       #3b526d;
+  --cor-botao:            #c2d3e0;
+  --cor-botao-hover:      #a5b9c9;
+  --cor-texto:            #2e2e2e;
+
+  --cor-paragrafo-fundo:  #e3fafd;   /* azul bem suave para blocos de texto */
+  --cor-foto-borda:       #2c3e50;   /* azul médio, em sintonia com o cinza */
+}
+
+
+body {
+    margin: auto;
+
+}
+
+nav {
+    box-shadow: deslocamento-x deslocamento-y desfoque espalhamento cor;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--cor-foto-borda);
+
+}
+
 nav ul {
     
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 60px;
 }
 
 nav li {
     margin: 10px;
     display: inline;
-    margin-right: 100px;
+    margin-right: 10px;
+
     
 }
 
 nav a {
-    
     text-decoration: none;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: coral;
-}
+    color: white;
+    background-color: var(--cor-menu);
+    }
+
+   nav a:hover {
+    text-decoration: none;
+    color:white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* sombra suave branca */
+    
+    } 
 
 h1 {
     text-align: center;
     margin: 40px 0px 40px 0px;
+    color: var(--cor-texto);
 }
 
 .cartao {
     margin: auto;
     width: 400px;
     height: 290px;
-    background-color: blueviolet;
+    background-color: var(--cor-foto-borda);
+    box-shadow: deslocamento-x deslocamento-y desfoque espalhamento cor;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 20px;
 }
@@ -40,7 +77,7 @@ section {
     
     width: 390px;
     height: 280px;
-    background-color: aquamarine;
+    background-color: var(--cor-paragrafo-fundo);
     border-radius: 5px;
     padding: 5px;
     
@@ -48,12 +85,33 @@ section {
 
 section ul {
     align-items: center;
+    color: var(--cor-texto);
 }
 
 .botao {
-    text-align: center;
-    margin-top: 50px;
-    background-color: bisque;
+    margin: auto;
+    padding: 10px;
     border-radius: 5px;
-    
+    text-align: center;
+    margin-top: 70px;
+    background-color: var(--cor-botao);
+    width: 200px;
+    box-shadow: deslocamento-x deslocamento-y desfoque espalhamento cor;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.botao:hover {
+    background-color: var(--cor-botao-hover); 
+}
+
+a {
+    text-decoration: none;
+     width: 200px;
+     color: var(--cor-texto);
+}
+
+
+.botao a:hover {
+    text-decoration: none;
+    background-color: var(--cor-botao-hover);
 }
