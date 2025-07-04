@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+:root {
+  --cor-fundo: #fdfdfd;          /* branco levemente quente */
+  --cor-menu: #e3eaf2;           /* azul bem claro e elegante */
+  --cor-link: #3b4a5a;           /* azul acinzentado escuro para texto */
+  --cor-link-hover: #1f2d3d;     /* tom mais intenso no hover */
+  --cor-botao: #c2d3e0;          /* azul clarinho para botão */
+  --cor-botao-hover: #a5b9c9;    /* tom médio no hover */
+  --cor-texto: #2e2e2e;          /* cinza grafite, ótima leitura */
+}
+
+nav ul {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+nav li {
+    margin: 10px;
+    display: inline;
+    margin-right: 100px;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--cor-menu);
+    }
+
+body {
+    margin: auto;
+    
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+    margin: auto;   
+    
+}
+
+.paragrafos {
+    display: flexbox;
+    background-color: blueviolet;
+    max-width: 600px;
+    max-height: 400px;
+    border-radius: 5px;
+    padding: 5px;
+    
+}
+
+.foto {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 300px;
+    border: 3px solid blue;
+    border-radius: 50%;
+    background-color: black;
+    margin-left: 70px;
+
+
+}
+
+img {
+    border-radius: 50%;
+    
+}
+
+.botao {
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 70px;
+    background-color: var(--cor-botao);
+    width: 200px;
+}
+
+a {
+    text-decoration: none;
+     width: 200px;
+}
+
+
+.botao a:hover {
+    text-decoration: none;
+    background-color: var(--cor-link-hover);
+    color: white;
+   
+}
+
