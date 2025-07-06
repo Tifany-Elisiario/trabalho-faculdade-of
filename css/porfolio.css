@@ -1,86 +1,102 @@
 @charset "UTF-8";
+/*Codificação para caracteres*/
 
 :root {
-  --cor-fundo:            #fdfdfd;
-  --cor-menu:             #2c3e50;   /* faixa do menu */
-  --cor-link-hover:       #3b526d;
-  --cor-botao:            #c2d3e0;
-  --cor-botao-hover:      #a5b9c9;
-  --cor-texto:            #2e2e2e;
+    /*variáveis globais*/
+    /*Cores*/
 
-  --cor-paragrafo-fundo:  #e3fafd;   /* azul bem suave para blocos de texto */
-  --cor-foto-borda:       #2c3e50;   /* azul médio, em sintonia com o cinza */
+    --cor-fundo: #fdfdfd;
+    --cor-link-hover: #3b526d;
+    --cor-cinza-claro: #c2d3e0;
+    --cor-cinza-médio: #a5b9c9;
+    --cor-texto-principal: #2e2e2e;
+    --cor-azul-claro: #e3fafd;
+    --cor-azul-escuro: #2c3e50;
+
+    /* Fontes */
+    --fonte-titulo: Georgia, serif;
+    --fonte-paragrafo-menu: Arial, Helvetica, sans-serif;
 }
-
 
 body {
     margin: auto;
-
+    /*centralizar todo o conteúdo na página*/
 }
 
 nav {
-    box-shadow: deslocamento-x deslocamento-y desfoque espalhamento cor;
+    /*estilização do menu com sombra e cor de fundo*/
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: var(--cor-foto-borda);
-
+    background-color: var(--cor-azul-escuro);
 }
 
 nav ul {
-    
+    /*deixando os itens da lista em linha horizontal*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 nav li {
+    /*deixando os intens da lista lado a lado*/
     margin: 10px;
     display: inline;
     margin-right: 10px;
-
-    
 }
 
 nav a {
+    /*estilizando links do menu*/
     text-decoration: none;
     color: white;
-    background-color: var(--cor-menu);
-    }
+    background-color: var(--cor-azul-escuro);
+    font-family: var(--fonte-paragrafo-menu);
+}
 
-   nav a:hover {
+nav a:hover {
+    /*estilização específica quando o cursor passa sobre o link*/
     text-decoration: none;
-    color:white;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* sombra suave branca */
-    
-    } 
+    color: white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    /* sombra suave branca */
+}
+
 h1 {
+    /*estilizando título*/
     text-align: center;
     margin: 50px 0px 30px 0px;
-    color: var(--cor-texto);
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-titulo);
+}
+
+h2 {
+    /*estilizando título*/
+    text-align: center;
+    font-size: 20px;
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-titulo);
 }
 
 .bloco {
+    /*estilizando bloco onde estão os projetos, transformei em uma caixa maior com sombra, fundo de cor diferente */
     display: flex;
     gap: 50px;
     justify-content: center;
     width: 800px;
     height: 250px;
-    background-color: var(--cor-paragrafo-fundo);
-    box-shadow: deslocamento-x deslocamento-y desfoque espalhamento cor;
+    background-color: var(--cor-azul-claro);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     border-radius: 5px;
     margin: auto;
-    
 }
 
 .bloco a {
+    /*estilizando os links de cada projeto dentro do bloco, estão similares a um botão */
     display: flex;
     max-width: 200px;
     justify-content: center;
     text-decoration: none;
-    background-color: var(--cor-foto-borda);
-    box-shadow: deslocamento-x deslocamento-y desfoque espalhamento cor;
+    background-color: var(--cor-azul-escuro);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     color: white;
     border-radius: 5px;
@@ -89,51 +105,71 @@ h1 {
 }
 
 .pum {
-    color: var(--cor-texto);
+    /*estillização do parágrafo um */
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-paragrafo-menu);
 }
 
-
 .pdois {
-    border-left: 3px solid var(--cor-foto-borda);
+    /*estillização do parágrafo dois + borda que serve como linha de separação */
+    border-left: 3px solid var(--cor-azul-escuro);
     padding-left: 20px;
-    color: var(--cor-texto);
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-paragrafo-menu);
 }
 
 .ptres {
-    border-left: 3px solid var(--cor-menu);
+    /*estillização do parágrafo três + borda que serve como linha de separação */
+    border-left: 3px solid var(--cor-azul-escuro);
     padding-left: 20px;
-    color: var(--cor-texto);
-    
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-paragrafo-menu);
 }
 
 .botao {
+    /*estilizando tamanho, formato, cor da div que contém o link que simula o botão*/
     margin: auto;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     margin-top: 70px;
-    background-color: var(--cor-botao);
+    background-color: var(--cor-cinza-claro);
     width: 200px;
-    box-shadow: deslocamento-x deslocamento-y desfoque espalhamento cor;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: var(--fonte-paragrafo-menu);
 }
 
 .botao:hover {
-    background-color: var(--cor-botao-hover); 
+    /*estilização específica quando o cursor passa sobre o bloco do botão*/
+    background-color: var(--cor-cinza-médio);
 }
 
 a {
+    /*estilizando link do botão*/
     text-decoration: none;
-     width: 200px;
-     color: var(--cor-texto);
+    width: 200px;
+    color: var(--cor-texto-principal);
 }
 
 .ptres a {
-margin-top: 50px;
+    /*estilização específica para alinhar parágrafo três com os demais*/
+    margin-top: 50px;
 }
 
-
 .botao a:hover {
+    /*estilização específica quando o cursor passa sobre o link do botão*/
     text-decoration: none;
-    background-color: var(--cor-botao-hover);
+    background-color: var(--cor-cinza-médio);
+}
+
+footer {
+    /*estilizando rodapé*/
+    background-color: var(--cor-azul-escuro);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-family: var(--fonte-paragrafo-menu);
+    font-size: 14px;
+    margin-top: 50px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
 }
